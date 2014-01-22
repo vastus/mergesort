@@ -10,20 +10,21 @@ mergeSort(int *ary, int len)
     if (len < 2) return;
 
     // Divide.
-    int mid = len / 2;
-    int *a = (int *) malloc(mid * sizeof(int));
-    int *b = (int *) malloc((mid + (len % 2)) * sizeof(int));
+    int aLen = len / 2;
+    int bLen = aLen + (len % 2);
+    int *a = (int *) malloc(aLen * sizeof(int));
+    int *b = (int *) malloc((aLen + (len % 2)) * sizeof(int));
 
     int i = 0, j = 0, k = 0;
-    while (i < mid) a[i++] = ary[k++];
-    while (j < (mid + (len % 2))) b[j++] = ary[k++];
+    while (i < aLen) a[i++] = ary[k++];
+    while (j < bLen) b[j++] = ary[k++];
 
     // Recur.
-    mergeSort(a, mid);
-    mergeSort(b, (mid + (len % 2)));
+    mergeSort(a, aLen);
+    mergeSort(b, bLen);
 
     // Conquer.
-    merge(ary, len, a, mid, b, (mid + (len % 2)));
+    merge(ary, len, a, aLen, b, bLen);
 
     // Free allocated memory.
     free(a);
