@@ -5,9 +5,6 @@ void
 mergeSort(int *, int);
 
 void
-divide(int[]);
-
-void
 merge(int *, int, int *, int, int *, int);
 
 #endif
