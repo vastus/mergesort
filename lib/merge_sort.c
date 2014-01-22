@@ -6,6 +6,7 @@
 void
 mergeSort(int *ary, int len)
 {
+    // Sorted when lt two items.
     if (len < 2) return;
 
     // Divide.
