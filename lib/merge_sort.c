@@ -13,7 +13,7 @@ mergeSort(int *ary, int len)
     int aLen = len / 2;
     int bLen = aLen + (len % 2);
     int *a = (int *) malloc(aLen * sizeof(int));
-    int *b = (int *) malloc((aLen + (len % 2)) * sizeof(int));
+    int *b = (int *) malloc(bLen * sizeof(int));
 
     int i = 0, j = 0, k = 0;
     while (i < aLen) a[i++] = ary[k++];
