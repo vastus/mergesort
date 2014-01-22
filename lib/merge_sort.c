@@ -35,9 +35,12 @@ void
 merge(int *ary, int aryLen, int *a, int aLen, int *b, int bLen)
 {
     int i = 0, j = 0, k = 0;
+
+    // Merge sub-arrays to sorted.
     while (i < aLen && j < bLen)
         ary[k++] = (a[i] <= b[j]) ? a[i++] : b[j++];
 
+    // Loop thru remaining items.
     while (i < aLen) ary[k++] = a[i++];
     while (j < aLen) ary[k++] = b[j++];
 }
