@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "lib/merge_sort.c"
+#include "lib/merge_sort.h"
 
 void
 printArr(int *, int);
