@@ -23,8 +23,9 @@ void
 printArr(int *ary, int len)
 {
     printf("[");
-    for (int i = 0; i < (len - 1); i++)
+    for (int i = 0; i < (len - 1); i++) {
         printf("%d, ", ary[i]);
+    }
     printf("%d]\n", ary[(len -1)]);
 }
 
